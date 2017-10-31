@@ -2,9 +2,9 @@
 
 # AWS AMI Linux
 
-Note:
+Mac Users, Docker wants to run web apps from the /Users/ directory. You will want to put your source code there.
 
-Docker wants to run web apps from the /Users/ directory. You will want to put your source code there.
+Before getting started you will awnt to make sure you have done the following: 
 
 1) Install the latest Docker on your machine if you haven't already. If you have VirtualBox installed make sure it is updated to the latest version.
 
