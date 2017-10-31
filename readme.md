@@ -12,7 +12,7 @@ Before getting started you will want to make sure you have done the following:
 
 3) Create a local virtual box. Open terminal, run `docker-machine create --driver virtualbox default`
 
-If you are running MySQL you will need to allocate extra memory
+If you are running MySQL you may need to allocate extra memory
 
     docker-machine create --driver virtualbox --virtualbox-memory 4096 default
 
@@ -36,7 +36,7 @@ You can create an alias in your .bash_profile or .bashrc file to start up your m
 
 For more legit info visit this hyperlink: [Docker Machine Documentation](https://docs.docker.com/machine/get-started/)
 
-7) Get the Amazon Linux Docker Image
+7) Get the Amazon Linux Docker Image on your local machine by running this:
 
     docker pull amazonlinux
 
@@ -44,10 +44,13 @@ For more legit info visit this hyperlink: [Docker Machine Documentation](https:/
 
     docker pull composer/composer
 
+9) Create your own apache image in a new folder on your machine where you want to store images. It can be anywhere, I put mine in my project webroot in a folder called docker and then images.
 
-9) Create your own apache image in a new folder on your machine where you want to store images. It can be anywhere, I put mine in my project webroot and called it images.
+    ~/Users/project-folder/docker/images
 
 10) From shell, navigate into your images folder and create a folder called apachephp. Then create a folder in the apachephp folder called ami(you might later want an Ubuntu apache image). Create a new file in the ami folder called Dockerfile and paste in the following:
+
+    ~/Users/project-folder/docker/images/apachephp
 
 ```
 FROM amazonlinux
