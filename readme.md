@@ -46,11 +46,11 @@ For more legit info visit this hyperlink: [Docker Machine Documentation](https:/
 
 9) Create your own apache image in a new folder on your machine where you want to store images. It can be anywhere, I put mine in my project webroot in a folder called docker and then images.
 
-    ~/Users/project-folder/docker/images
+    `~/Users/project-folder/docker/images`
 
 10) From shell, navigate into your images folder and create a folder called apachephp. Then create a folder in the apachephp folder called ami(you might later want an Ubuntu apache image). Create a new file in the ami folder called Dockerfile and paste in the following:
 
-    ~/Users/project-folder/docker/images/apachephp
+    `~/Users/project-folder/docker/images/apachephp`
 
 ```
 FROM amazonlinux
@@ -68,11 +68,11 @@ ENTRYPOINT ["/usr/sbin/httpd"]
 
 10) Run this command from the folder to package up your docker image:
 
-      docker build -t killacam/apachephp docker/images/apachephp/ami/.
+    `docker build -t killacam/apachephp docker/images/apachephp/ami/.`
 
 If you need to rebuild your image after making changes run the command with --no-cache option.
 
-      docker build --no-cache -t killacam/apachephp docker/images/apachephp/ami/.
+    `docker build --no-cache -t killacam/apachephp docker/images/apachephp/ami/.`
 
 11) Build your mysql container images/mysql/ami/Dockerfile
 
