@@ -1,5 +1,9 @@
-FROM amazonlinux:latest
+FROM amazonlinux
 MAINTAINER Cameron Macfarlane <cammac1984@gmail.com>
 
-RUN yum update 
-RUN yum install -y php71-mysqlnd 
+RUN yum update -y
+RUN yum install mysql56-server -y
+
+RUN chown -R mysql:root /var/lib/mysql/
+
+EXPOSE 3306

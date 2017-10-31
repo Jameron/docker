@@ -1,0 +1,30 @@
+version: '2'
+services:
+    apachephp:
+        image: killacam/apachephp
+        ports:
+            - "8080:80"
+        volumes:
+            - ./:/var/www/html
+            - ./docker/vhost.conf:/etc/httpd/conf.d/vhost.conf
+        networks: 
+            - appnet
+        tty: true
+    mysql:    
+        image: mysql:5.6
+        ports:
+            - "3306:3306"
+        volumes:
+            - ./data/:/var/lib/mysql
+        user: "1000:50"
+        tty: true
+        networks: 
+            - appnet
+        environment:
+            #  - "MYSQL_DATABASE=csg"
+            #- "MYSQL_USER=test"
+            #- "MYSQL_PASSWORD=qwe123"
+            - "MYSQL_ROOT_PASSWORD=root"
+networks: 
+    appnet:
+        driver: "bridge"
