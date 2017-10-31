@@ -76,7 +76,7 @@ If you need to rebuild your image after making changes run the command with --no
 
 11) Build your mysql container images/mysql/ami/Dockerfile
 
-`
+```
 FROM amazonlinux
 MAINTAINER Cameron Macfarlane <cammac1984@gmail.com>
 
@@ -86,21 +86,13 @@ RUN yum install mysql56-server -y
 RUN chown -R mysql:root /var/lib/mysql/
 
 EXPOSE 3306
-`
+```
 
-    docker build -t killacam/mysql docker/images/mysql/ami/.
-
-
-    docker build --no-cache -t killacam/php docker/images/php/ami/.
+    `docker build -t killacam/mysql docker/images/mysql/ami/.`
 
 
-Or you can run docker using pfp-fpm module with NGinx
+    `docker build --no-cache -t killacam/php docker/images/php/ami/.`
 
-`service:
-
-`
-
-    docker build --no-cache -t killacam/php-fpm docker/images/php-fpm/ami/.
 
 
 11) Navigate to your web application and run your docker apache container with this command:
