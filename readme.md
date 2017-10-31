@@ -38,11 +38,11 @@ For more legit info visit this hyperlink: [Docker Machine Documentation](https:/
 
 7) Get the Amazon Linux Docker Image on your local machine by running this:
 
-    docker pull amazonlinux
+    `docker pull amazonlinux`
 
 8) To get the composer docker package run: 
 
-    docker pull composer/composer
+    `docker pull composer/composer`
 
 9) Create your own apache image in a new folder on your machine where you want to store images. It can be anywhere, I put mine in my project webroot in a folder called docker and then images.
 
