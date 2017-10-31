@@ -88,10 +88,10 @@ RUN chown -R mysql:root /var/lib/mysql/
 EXPOSE 3306
 ```
 
-    `docker build -t killacam/mysql docker/images/mysql/ami/.`
+    docker build -t killacam/mysql docker/images/mysql/ami/.
 
 
-    `docker build --no-cache -t killacam/php docker/images/php/ami/.`
+    docker build --no-cache -t killacam/php docker/images/php/ami/.
 
 
 
