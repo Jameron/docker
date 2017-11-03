@@ -20,6 +20,15 @@ or
 
     docker-machine create --driver virtualbox --virtualbox-memory 8192 default
 
+Make sure to copy the IP address excluding the color and port number at the end. 
+
+Open up
+
+    /etc/hosts
+
+add the line:
+
+    192.168.99.100 docker.dev
 
 4) Once that is finished you can check that it worked by listing your virtual boxes using this command: `docker-machine ls`
 
@@ -90,14 +99,13 @@ EXPOSE 3306
 
     docker build -t killacam/mysql docker/images/mysql/ami/.
 
-
     docker build --no-cache -t killacam/php docker/images/mysql/ami/.
 
-
-
-11) Navigate to your web application and run your docker apache container with this command:
+11) You can run the package via bash using this command:
 
 `docker run -it -p 8080:80 -v $(pwd)/docker/vhost.conf:/etc/httpd/conf.d/vhost.conf -v $(pwd):/var/www/html killacam/apachephp;` 
+
+You can run you bare AWS Linux instance with no packages like this:
 
 `docker run -it amazonlinux:latest /bin/bash`
 
@@ -106,7 +114,7 @@ To Stop your virtual machine run
  `docker-machine stop default`
 
 
-To start your container as daemon (background) run
+To start your container as daemon (background) via docker-compose.yml file via:
 
     docker-compose up -d
 
