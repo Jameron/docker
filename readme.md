@@ -20,7 +20,7 @@ or
 
     docker-machine create --driver virtualbox --virtualbox-memory 8192 default
 
-Make sure to copy the IP address excluding the color and port number at the end. 
+Make sure to copy the IP address excluding the color and port number at the end.  E.g. tcp://192.168.99.100:2376 you would copy just 192.168.99.100
 
 Open up
 
