@@ -41,12 +41,14 @@ add the line:
 5) You can list commands for your new VM with this: 
 
 ```bash
-docker-machine env default```
+docker-machine env default
+```
 
 6) Next you can connect your shell to your VM 
 
 ```bash 
-eval "$(docker-machine env default)"```
+eval "$(docker-machine env default)"
+```
 
 To stop your machine run `docker-machine stop default`
 To restart your machine run `docker-machine start default`
