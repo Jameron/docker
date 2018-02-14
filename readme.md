@@ -50,12 +50,22 @@ docker-machine env default
 eval "$(docker-machine env default)"
 ```
 
-To stop your machine run `docker-machine stop default`
-To restart your machine run `docker-machine start default`
+To stop your machine run 
+
+```bash
+docker-machine stop default
+```
+
+To restart your machine run 
+```bash
+docker-machine start default
+```
 
 You can create an alias in your .bash_profile or .bashrc file to start up your machine and connect your shell like this:
 
-    alias dockup="docker-machine start default && eval \"\$(docker-machine env default)\""
+```bash
+alias dockup="docker-machine start default && eval \"\$(docker-machine env default)\""
+```
 
 For more legit info visit this hyperlink: [Docker Machine Documentation](https://docs.docker.com/machine/get-started/)
 
