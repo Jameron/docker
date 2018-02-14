@@ -144,7 +144,7 @@ This never worked for me but you can try setting up your own MySQL install:
 
 Build your mysql container images/mysql/ami/Dockerfile
 
-```
+```docker
 FROM amazonlinux
 MAINTAINER Cameron Macfarlane <cammac1984@gmail.com>
 
