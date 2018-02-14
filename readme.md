@@ -1,5 +1,5 @@
 # Setting up a local Docker environment with:
-# AWS AMI Linux, Apache 2, PHP7.1, MySQL
+## AWS AMI Linux, Apache 2, PHP7.1, MySQL
 
 ***Mac Users, Docker wants to run web apps from the /Users/ directory. You will want to put your source code there.
 
